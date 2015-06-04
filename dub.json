@@ -1,0 +1,13 @@
+{
+   "name": "derelict-paho",
+   "description": "A dynamic binding to the paho mqtt library.",
+   "license": "Boost",
+   "authors": [ "Orfeo Da Viá" ],
+
+    "targetName": "DerelictPaho",
+    "targetPath": "lib",
+
+    "dependencies": {
+       "derelict-util": "~>2.0.0"
+    }
+}
