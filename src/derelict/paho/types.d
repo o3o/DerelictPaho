@@ -1,6 +1,26 @@
 module derelict.paho.types;
 
-public alias MQTTClient = void*;
+/**
+  * This <i>persistence_type</i> value specifies the default file system-based
+  * persistence mechanism (see MQTTClient_create()).
+  */
+enum MQTTCLIENT_PERSISTENCE_DEFAULT = 0;
+enum MQTTCLIENT_PERSISTENCE_NONE = 1;
+enum MQTTCLIENT_PERSISTENCE_USER = 2;
+
+enum MQTTCLIENT_SUCCESS = 0;
+enum MQTTCLIENT_FAILURE = -1;
+enum MQTTCLIENT_DISCONNECTED = -3;
+enum MQTTCLIENT_MAX_MESSAGES_INFLIGHT = -4;
+enum MQTTCLIENT_BAD_UTF8_STRING = -5;
+enum MQTTCLIENT_NULL_PARAMETER = -6;
+enum MQTTCLIENT_TOPICNAME_TRUNCATED = -7;
+enum MQTTCLIENT_BAD_STRUCTURE = -8;
+enum MQTTCLIENT_BAD_QOS = -9;
+
+alias MQTTClient = void*;
+alias MQTTClient_deliveryToken = int;
+alias MQTTClient_token = int;
 
 /**
  * A structure representing the payload and attributes of an MQTT message. The
